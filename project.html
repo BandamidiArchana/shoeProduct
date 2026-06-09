@@ -489,8 +489,9 @@
                 }
                 d3.style.display = "block";
                 carton = true;
-
-
+// update
+                document.getElementById("tc").innerHTML="";
+                total=0;
                 //Displaying Products on Table
                 orders = userdetails[current_user][3];
                 console.log(orders);
@@ -572,6 +573,7 @@
                 key : razorpay_key,
                 amount : total * 100,
                 currency : "INR",
+                name : "Archana",
                 description : "Payment for Shoe",
                 image : "logo.png",
                 handler : function(response){
